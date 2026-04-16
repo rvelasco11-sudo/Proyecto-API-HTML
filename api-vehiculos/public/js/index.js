@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
-import Almacen from "./src/Almacen.js";
+import Almacen from "../../../Almacen.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+const API_PREFIX = "/api";
 app.use(cors());
 app.use(express.json());
 
@@ -55,5 +55,5 @@ app.delete("/vehiculos/:placa", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
+  console.log(` Servidor corriendo en http://localhost:${PORT}`);
 });
